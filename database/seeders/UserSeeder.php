@@ -23,6 +23,13 @@ class UserSeeder extends Seeder
         ]);
         $superAdmin->assignRole('super admin');
 
+        $counter = $superAdmin->counter()->create([
+            'name' => 'Counter SA',
+            'slug' => Str::slug('Counter SA'),
+            'status' => true,
+        ]);
+
+        $counter->visa_types()->attach(rand(1,2));
         $admin = User::create([
             'name' => 'Admin User',
             'email' => 'admin@iom.int',
@@ -30,6 +37,12 @@ class UserSeeder extends Seeder
             'password' => bcrypt('Admin1234'),
         ]);
         $admin->assignRole('admin');
+        $counter = $admin->counter()->create([
+            'name' => 'Counter Admin',
+            'slug' => Str::slug('Counter Admin'),
+            'status' => true,
+        ]);
+        $counter->visa_types()->attach(rand(1,2));
 
         for($i = 1; $i <= 10; $i++){
             $agent = User::create([
@@ -46,7 +59,7 @@ class UserSeeder extends Seeder
                 'status' => true,
             ]);
 
-            $counter->visaTypes()->attach(rand(1,2));
+            $counter->visa_types()->attach(rand(1,2));
         }
     }
 }

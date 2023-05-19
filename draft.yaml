@@ -1,0 +1,6 @@
+models:
+  TestDelete:
+    id
+    name: string
+    queue_id: id foreign:queues.id
+    timestamps

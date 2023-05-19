@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('slug');
             $table->foreignId('user_id')->constrained();
             $table->boolean('status')->default(1);
+            $table->string('queue_status')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

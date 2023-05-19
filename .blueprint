@@ -1,0 +1,9 @@
+created:
+    - database/migrations/2023_05_17_135641_create_test_deletes_table.php
+    - app/Models/TestDelete.php
+models:
+    Counter: { name: string, slug: string, user_id: 'biginteger unsigned', status: 'boolean default:1' }
+    Queue: { status: string, number: string, counter_id: 'biginteger unsigned nullable', visa_type_id: 'biginteger unsigned' }
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    VisaType: { name: string, slug: string, code: string, starting_number: 'integer nullable default:1', status: 'boolean default:1' }
+    TestDelete: { id: id, name: string, queue_id: 'id foreign:queues.id', timestamps: timestamps }

@@ -20,4 +20,5 @@ Route::group([
     Route::crud('counter', 'CounterCrudController');
     Route::crud('queue', 'QueueCrudController');
     Route::get('lineup', 'LineupController@index')->name('page.lineup.index');
+    Route::get('display', 'DisplayController@index')->name('page.display.index');
 }); // this should be the absolute last line of this file

@@ -17,3 +17,5 @@
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('queue') }}"><i class="nav-icon la la-question"></i> Queues</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('lineup') }}"><i class="nav-icon la la-question"></i> Lineup</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('display') }}"><i class="nav-icon la la-question"></i> Display</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('setting') }}'><i class='nav-icon la la-cog'></i> <span>Settings</span></a></li>

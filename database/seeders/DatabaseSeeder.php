@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             VisaTypeSeeder::class,
             RolesAndPermissionsSeeder::class,
             UserSeeder::class,
+            QueueSeeder::class,
         ]);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
